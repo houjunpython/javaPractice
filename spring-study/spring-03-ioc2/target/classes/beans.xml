@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--&lt;!&ndash;有参构造第一种：下标赋值&ndash;&gt;
+    <bean id="user" class=" com.kuang.pojo.User">
+        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;
+       <constructor-arg index="0" value="狂神说Java"/>
+    </bean>-->
+
+    <!-- more bean definitions go here -->
+    <!-- 第二种方式：类型  不推荐使用  -->
+ <!--   <bean id="user" class="com.kuang.pojo.User">
+        <constructor-arg type="java.lang.String" value="qinjiang"/>
+    </bean>-->
+    <!-- 第三种方式：直接通过参数名   -->
+    <bean id="user" class="com.kuang.pojo.User" name="user3" >
+        <constructor-arg name="name" value="qinjiang"/>
+    </bean>
+<!--    name也是别名 并且可以创建多个别名-->
+
+</beans>
